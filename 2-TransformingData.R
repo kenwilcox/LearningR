@@ -22,7 +22,7 @@ names(movies)[5] <- "Critic.Score"
 names(movies)
 
 # Problem #2: Missing values
-# Count missinv values
+# Count missing values
 sum(is.na(movies))
 
 # Inspect rows with missing values
@@ -31,11 +31,11 @@ tail(movies)
 # Exclude observations with missing values
 movies <- na.omit(movies)
 
-# Problem #2 Solved
+# Problem #2 solved
 sum(is.na(movies))
 
 # Problem #3 units in runtime column
-# Peek at the raw interest rate data
+# Peek at the movie runtime data
 head(movies$Runtime)
 
 # minutes is not an integer, can't do math
@@ -64,7 +64,7 @@ mean(movies$Runtime)
 # Problem 4: Box office uses three units of measure
 head(movies$Box.Office)
 
-# Create a function to convert box office revenu
+# Create a function to convert box office revenue
 convertBoxOffice <- function(boxOffice)
 {
   stringBoxOffice <- as.character(boxOffice)
@@ -80,7 +80,7 @@ convertBoxOffice <- function(boxOffice)
   }
 }
 
-# Convert box office to single units of measure (millions)
+# Convert box office to single unit of measure (millions)
 movies$Box.Office <- sapply(movies$Box.Office, convertBoxOffice)
 
 # Problem 4 is solved
