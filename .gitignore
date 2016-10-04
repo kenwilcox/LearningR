@@ -103,6 +103,7 @@ _ReSharper*/
 # JustCode is a .NET coding add-in
 .JustCode
 
+Movies.csv
 # TeamCity is a build add-in
 _TeamCity*
 
