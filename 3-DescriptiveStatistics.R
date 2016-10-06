@@ -44,3 +44,13 @@ var(movies$Runtime)
 
 # standard deviation
 sd(movies$Runtime)
+
+# Skewness and kurtosis not built in, moments has it!
+install.packages("moments")
+library(moments)
+skewness(movies$Runtime)
+kurtosis(movies$Runtime)
+plot(density(movies$Runtime))
+
+# Summarize a quantitative variable
+summary(movies$Runtime)
